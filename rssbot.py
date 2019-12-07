@@ -1,8 +1,6 @@
 import feedparser
 
-from myconfig import rss_url
-
-async def rssquery(querymsg, message):
+async def rssquery(querymsg, message, rss_url):
     if len(querymsg) == 1:
         await message.channel.send("Du kan väl åtminstone använda två tecken i din sökning?")
         return

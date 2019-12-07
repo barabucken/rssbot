@@ -57,7 +57,7 @@ async def on_message(message):
 		'$rss <sökterm> : Söker igenom FZ.SE\'s RSS-feed efter en matchande titel\n')
 		return
 	if message.content.startswith('$rss'):
-		await rssquery(message.content.lower()[5:], message)
+		await rssquery(message.content.lower()[5:], message, rss_url)
 		return
 	await fritext(message)
 
